@@ -25,4 +25,4 @@ jobs:
         - run: |
             echo $APP_DIR
             echo ${{ github.event.event.number }}
-            ech  ${{github.event_name }}
+            echo  ${{github.event_name }}
