@@ -15,7 +15,7 @@ on:
 
 
 env:
-  APP_DIR: ${{  github.event.issue.pull_request  &&  github.event.number || 'parameter-page' }}
+  APP_DIR: ${{  github.event.number  &&  github.event.number || 'parameter-page' }}
 
 jobs:
 
@@ -24,5 +24,6 @@ jobs:
       steps:
         - run: |
             echo $APP_DIR
-            echo ${{ github.event.event.number }}
+            echo ${{github.event.number}}
+            echo ${{github.event.issue.number}} 
             echo  ${{github.event_name }}
