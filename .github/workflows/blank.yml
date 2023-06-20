@@ -15,7 +15,7 @@ on:
 
 
 env:
-  APP_DIR: ${{  github.event.issue.pull_request  &&' parameter-page-PR'github.event.issue.number|| 'parameter-page' }}
+  APP_DIR: ${{  github.event.issue.pull_request  && github.event.issue.number|| 'parameter-page' }}
 
 jobs:
 
